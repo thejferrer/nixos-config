@@ -16,6 +16,48 @@
     telegram-desktop
     vesktop
 
+    # Migrating old home.nix
+    vivaldi
+    pipe-viewer
+    spotify
+    dolphin-emu
+    duckstation
+    pcsx2
+    networkmanagerapplet
+    discord
+    discordo
+    python310Full
+    libgcc
+    jellyfin
+    jellyfin-web
+    jellyfin-ffmpeg
+    yt-dlp
+    jq
+    libreoffice
+    nixd
+    unetbootin
+    meson
+    boost
+    mediawriter
+    osu-lazer-bin
+    gimp
+    keepassxc
+    libdrm
+    kdePackages.polkit-kde-agent-1
+    ferium
+    vscodium
+    winetricks
+    wineWowPackages.waylandFull
+    appimage-run
+    qt6.qtwayland
+    protontricks
+    firefox
+    thunderbird
+    kdePackages.dolphin
+    gtk3
+    qbittorrent
+    dotnet-runtime_7
+
     # CLI utils
     bc
     bottom
