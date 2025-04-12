@@ -24,10 +24,10 @@
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: let
     system = "x86_64-linux";
-    homeStateVersion = "23.11";
+    homeStateVersion = "24.05";
     user = "thomash";
     hosts = [
-      { hostname = "thomash"; stateVersion = "23.11"; }
+      { hostname = "thomash"; stateVersion = "24.05"; }
     ];
 
     makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {

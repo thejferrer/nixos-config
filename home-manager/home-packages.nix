@@ -1,5 +1,8 @@
 { pkgs, ... }: {
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "dotnet-runtime-7.0.20"
+  ];
 
   home.packages = with pkgs; [
     # Packages in each category are sorted alphabetically
@@ -24,9 +27,7 @@
     duckstation
     pcsx2
     networkmanagerapplet
-    discord
-    discordo
-    python310Full
+    # python310Full
     libgcc
     jellyfin
     jellyfin-web
@@ -53,7 +54,7 @@
     protontricks
     firefox
     thunderbird
-    kdePackages.dolphin
+    # kdePackages.dolphin
     gtk3
     qbittorrent
     dotnet-runtime_7
@@ -63,7 +64,7 @@
     bottom
     brightnessctl
     cliphist
-    ffmpeg
+    # ffmpeg
     ffmpegthumbnailer
     fzf
     git-graph

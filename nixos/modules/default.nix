@@ -13,7 +13,7 @@
     ./nix.nix
     ./timezone.nix
     ./user.nix
-    ./wireguard.nix
+    #./wireguard.nix
     ./zram.nix
   ];
 }
