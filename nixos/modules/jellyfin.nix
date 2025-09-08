@@ -11,4 +11,9 @@
         user = "thomash";
         group = "wheel";
     };
+
+
+    networking.firewall.allowedTCPPorts = [
+        8096
+    ];
 }

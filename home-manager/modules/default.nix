@@ -7,13 +7,11 @@
     ./eza.nix
     ./git.nix
     ./hyprland
-    ./jellyfin.nix
     ./lazygit.nix
     ./neovim.nix
     ./obsidian.nix
     ./ranger.nix
     ./starship.nix
-    ./steam.nix
     ./stylix.nix
     ./swaync
     ./tmux.nix

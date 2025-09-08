@@ -1,0 +1,6 @@
+{
+  # services.hyprshot = 
+  # {
+  #   enable = true;
+  # };
+}

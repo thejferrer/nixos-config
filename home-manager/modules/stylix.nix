@@ -11,18 +11,24 @@
     font-awesome
     powerline-fonts
     powerline-symbols
+    vimix-cursors
     (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
   ];
 
   stylix = {
     enable = true;
     polarity = "dark";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
 
     targets = {
+      alacritty.enable = true;
       neovim.enable = false;
       waybar.enable = false;
-      wofi.enable = false;
+      wofi.enable = true;
       hyprland.enable = false;
       hyprlock.enable = false;
     };
@@ -36,18 +42,22 @@
     fonts = {
       emoji = {
         name = "Noto Color Emoji";
+        #package = pkgs.font-awesome;
         package = pkgs.noto-fonts-color-emoji;
       };
       monospace = {
         name = "JetBrains Mono";
+        #package = pkgs.font-awesome;
         package = pkgs.jetbrains-mono;
       };
       sansSerif = {
         name = "Noto Sans";
+        #package = pkgs.font-awesome;
         package = pkgs.noto-fonts;
       };
       serif = {
         name = "Noto Serif";
+        #package = pkgs.font-awesome;
         package = pkgs.noto-fonts;
       };
 

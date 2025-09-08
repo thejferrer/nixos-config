@@ -4,6 +4,7 @@
     ./hypridle.nix
     ./hyprlock.nix
     ./hyprpaper.nix
+    # ./hyprshot.nix
     ./main.nix
   ];
 }

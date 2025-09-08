@@ -20,11 +20,13 @@ in {
   wayland.windowManager.hyprland.settings = {
     bind = [
       "$mainMod SHIFT, Return, exec, $terminal"
-      "$mainMod SHIFT, C, killactive,"
+      "$mainMod SHIFT, R, exec, hyprctl reload"
+      "$mainMod      , C, killactive,"
       "$mainMod SHIFT, Q, exit,"
-      "$mainMod,       R, exec, $fileManager"
-      "$mainMod,       F, togglefloating,"
-      "$mainMod,       D, exec, $menu --show drun"
+      "$mainMod,       F, exec, $fileManager"
+      "$mainMod L_ALT, F, togglefloating,"
+      "$mainMod CTRL,  F, fullscreen"
+      "$mainMod,       space, exec, $menu --show drun"
       "$mainMod,       P, pin,"
       "$mainMod,       J, togglesplit,"
       "$mainMod,       E, exec, bemoji -cn"
@@ -34,8 +36,22 @@ in {
       "$mainMod,       L, exec, loginctl lock-session"
       "$mainMod,       P, exec, hyprpicker -an"
       "$mainMod,       N, exec, swaync-client -t"
-      ", Print, exec, grimblast --notify --freeze copysave area"
-      "$mainMod,       W, exec, ${booksScript}/bin/open_books"
+      "$mainMod SHIFT, Print, exec, grimblast --notify copysave area"
+      "$mainMod,   Print, exec, hyprshot -m region"
+      # "$mainMod,       W, exec, ${booksScript}/bin/open_books"
+      "$mainMod,       W, exec, waytrogen"
+
+      # Launching apps
+      "$mainMod L_ALT, O, exec, obsidian"
+      "$mainMod L_ALT, V, exec, vivaldi"
+      "$mainMod L_ALT, S, exec, steam"
+      "$mainMod L_ALT, B, exec, btm"
+      "$mainMod L_ALT, G, exec, gimp"
+      "$mainMod L_ALT, K, exec, keepassxc"
+      "$mainMod L_ALT, T, exec, thunderbird"
+      "$mainMod L_ALT, D, exec, vesktop"
+      "$mainMod L_ALT, M, exec, spotify"
+      "$mainMod L_ALT, C, exec, cursor"
 
       # Moving focus
       "$mainMod, left, movefocus, l"
@@ -66,6 +82,8 @@ in {
       "$mainMod, 8, workspace, 8"
       "$mainMod, 9, workspace, 9"
       "$mainMod, 0, workspace, 10"
+      "$mainMod L_ALT, left, workspace, e-1"
+      "$mainMod L_ALT, right, workspace, e+1"
 
       # Moving windows to workspaces
       "$mainMod SHIFT, 1, movetoworkspacesilent, 1"
@@ -78,6 +96,18 @@ in {
       "$mainMod SHIFT, 8, movetoworkspacesilent, 8"
       "$mainMod SHIFT, 9, movetoworkspacesilent, 9"
       "$mainMod SHIFT, 0, movetoworkspacesilent, 10"
+
+      # Moving workspaces to monitors
+      "$mainMod CTRL, 1, movecurrentworkspacetomonitor, 0"
+      "$mainMod CTRL, 2, movecurrentworkspacetomonitor, 1"
+      # "$mainMod CTRL, 3, moveworkspacetomonitor, 2"
+      # "$mainMod CTRL, 4, moveworkspacetomonitor, 3"
+      # "$mainMod CTRL, 5, moveworkspacetomonitor, 4"
+      # "$mainMod CTRL, 6, moveworkspacetomonitor, 5"
+      # "$mainMod CTRL, 7, moveworkspacetomonitor, 6"
+      # "$mainMod CTRL, 8, moveworkspacetomonitor, 7"
+      # "$mainMod CTRL, 9, moveworkspacetomonitor, 8"
+      # "$mainMod CTRL, 0, moveworkspacetomonitor, 9"
 
       # Scratchpad
       "$mainMod,       S, togglespecialworkspace,  magic"
